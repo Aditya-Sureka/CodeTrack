@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Github Clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Aditya Sureka",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^11.1.0",
+    "yargs": "^17.7.2"
+  }
+}
