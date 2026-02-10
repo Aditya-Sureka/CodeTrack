@@ -5,10 +5,8 @@ const { promisify } = require("util");
 const readdir = promisify(fs.readdir);
 const copyFile = promisify(fs.copyFile);
 
-
 async function revertRepo(commitID) {
-  console.log("commitID:", commitID, typeof commitID);
-  const repoPath = path.resolve(process.cwd(), ".apnagit");
+  const repoPath = path.resolve(process.cwd(), ".apnaGit");
   const commitsPath = path.join(repoPath, "commits");
 
   try {

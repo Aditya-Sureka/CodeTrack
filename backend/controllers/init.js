@@ -1,8 +1,8 @@
-const fs = require("fs").promises; // fs -> file system
+const fs = require("fs").promises;
 const path = require("path");
 
-async function  initRepo() {
-  const repoPath = path.resolve(process.cwd(), ".apnagit");
+async function initRepo() {
+  const repoPath = path.resolve(process.cwd(), ".apnaGit");
   const commitsPath = path.join(repoPath, "commits");
 
   try {
@@ -10,11 +10,11 @@ async function  initRepo() {
     await fs.mkdir(commitsPath, { recursive: true });
     await fs.writeFile(
       path.join(repoPath, "config.json"),
-      JSON.stringify({ bucket: "s3 bucket" })
+      JSON.stringify({ bucket: process.env.S3_BUCKET })
     );
-    console.log("Repository initialised");
+    console.log("Repository initialised!");
   } catch (err) {
-    console.error("Error initializing repository", err);
+    console.error("Error initialising repository", err);
   }
 }
 

@@ -6,7 +6,7 @@ const IssueSchema = new Schema({
     type: String,
     required: true,
   },
-  decription: {
+  description: {
     type: String,
     required: true,
   },
@@ -23,4 +23,5 @@ const IssueSchema = new Schema({
 });
 
 const Issue = mongoose.model("Issue", IssueSchema);
-export default Issue;
+
+module.exports = Issue;

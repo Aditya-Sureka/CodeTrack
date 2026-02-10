@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 async function addRepo(filePath) {
-  const repoPath = path.resolve(process.cwd(), ".apnagit");
+  const repoPath = path.resolve(process.cwd(), ".apnaGit");
   const stagingPath = path.join(repoPath, "staging");
 
   try {
